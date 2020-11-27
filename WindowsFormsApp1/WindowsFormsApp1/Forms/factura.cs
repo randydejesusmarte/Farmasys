@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -19,11 +13,13 @@ namespace WindowsFormsApp1
             combocomplete();
             idf();
         }
-        string fecha;
-        int datafecha;
-        int id;
-        conectar conect = new conectar();
-        void combocomplete()
+
+        private string fecha;
+        private int datafecha;
+        private readonly int id;
+        private readonly conectar conect = new conectar();
+
+        private void combocomplete()
         {
             conect.Abrir();
             SqlCommand command = new SqlCommand("select Nombre from Inventario", conect.SqlConnection);
@@ -34,7 +30,8 @@ namespace WindowsFormsApp1
             }
             conect.Cerrar();
         }
-        void idf()
+
+        private void idf()
         {
             try
             {
@@ -47,7 +44,7 @@ namespace WindowsFormsApp1
                 }
                 conect.Cerrar();
             }
-            catch(Exception es)
+            catch (Exception es)
             {
                 MessageBox.Show($"error {es}");
             }
@@ -85,7 +82,7 @@ namespace WindowsFormsApp1
             combocomplete();
         }
 
-        void buscar()
+        private void buscar()
         {
             try
             {

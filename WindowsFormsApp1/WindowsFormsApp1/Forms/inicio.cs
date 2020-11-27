@@ -47,7 +47,10 @@ namespace WindowsFormsApp1
             form.Show();
         }
 
-        private void piclose_Click(object sender, EventArgs e) => Application.Exit();
+        private void piclose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void pisize_Click(object sender, EventArgs e)
         {
@@ -65,7 +68,10 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void pimini_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
+        private void pimini_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
 
         private void drager_MouseDown(object sender, MouseEventArgs e)
         {

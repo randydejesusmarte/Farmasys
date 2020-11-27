@@ -18,7 +18,8 @@ namespace WindowsFormsApp1
         {
             buscar();
         }
-        void buscar()
+
+        private void buscar()
         {
             try
             {

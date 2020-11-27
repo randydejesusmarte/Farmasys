@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Falto Ingresar el Nombre", "Alvertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtname.Focus();
-                
+
             }
             else if (txtpass.Text == "")
             {
@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
                             {
                                 inicio.nombre = sqlData["nombre"].ToString();
                                 inicio.sexo = sqlData["sexo"].ToString();
-                                
+
                             }
                             inicio.Show();
                             Hide();

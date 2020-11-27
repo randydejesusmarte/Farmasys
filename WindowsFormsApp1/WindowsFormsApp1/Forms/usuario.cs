@@ -21,10 +21,10 @@ namespace WindowsFormsApp1
             switch (s)
             {
                 case 0:
-                    txtnombre.Enabled = txtnickname.Enabled = txtpass.Enabled = csexo.Enabled = cpuesto.Enabled =pictureBox1.Enabled= false;
+                    txtnombre.Enabled = txtnickname.Enabled = txtpass.Enabled = csexo.Enabled = cpuesto.Enabled = pictureBox1.Enabled = false;
                     break;
                 case 1:
-                    txtnombre.Enabled = txtnickname.Enabled = txtpass.Enabled = csexo.Enabled = cpuesto.Enabled =pictureBox1.Enabled= true;
+                    txtnombre.Enabled = txtnickname.Enabled = txtpass.Enabled = csexo.Enabled = cpuesto.Enabled = pictureBox1.Enabled = true;
                     break;
             }
             conectar.Cerrar();
