@@ -18,6 +18,7 @@ namespace WindowsFormsApp1
         private static extern void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private static extern void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
+
         private void inicio_Load(object sender, EventArgs e)
         {
             welcom.Visible = true;

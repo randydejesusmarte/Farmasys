@@ -88,12 +88,10 @@ namespace WindowsFormsApp1
             {
                 conect.Abrir();
                 SqlCommand mySqlCommand = new SqlCommand($"SELECT idfactura as 'ID',Nombre_cliente as 'Nombre del Cliente',Nombre_producto as 'Productos',Precio,Cantidad,Monto,Fecha_del_Registro FROM Factura where idfactura ='{textBox1.Text}'", conect.SqlConnection);
-                SqlDataAdapter SqlDataAdapter = new SqlDataAdapter { SelectCommand = mySqlCommand };
+                SqlDataAdapter sqlData = new SqlDataAdapter();
                 DataTable dataTable = new DataTable();
-                SqlDataAdapter.Fill(dataTable);
-                BindingSource bindingSource = new BindingSource { DataSource = dataTable };
-                dataGridView1.DataSource = bindingSource;
-                SqlDataAdapter.Update(dataTable);
+                sqlData.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
                 conect.Cerrar();
             }
             catch (Exception es)
@@ -104,18 +102,22 @@ namespace WindowsFormsApp1
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Seguro que deseas agregar a factura?","info",MessageBoxButtons.YesNo);
+            if (result == DialogResult.OK)
             {
-                conect.Abrir();
-                SqlCommand sqlCommand = new SqlCommand($"INSERT INTO Factura (idfactura,Nombre_cliente ,Nombre_producto,Precio,Cantidad,Monto,Fecha_del_Registro ) VALUES ('{textBox1.Text}', '{textBox2.Text}','{comboBox1.Items}','{textBox4.Text}','{textBox4.Text}','{textBox5.Text}','{DateTime.Now.ToString("dd/MM/yyyy")}')", conect.SqlConnection);
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Reguistro Exitoso");
-                conect.Cerrar();
-            }
-            catch (Exception es)
-            {
-                MessageBox.Show($"ERROR: {es}");
-                conect.Cerrar();
+                try
+                {
+                    conect.Abrir();
+                    SqlCommand sqlCommand = new SqlCommand($"INSERT INTO Factura (idfactura,Nombre_cliente ,Nombre_producto,Precio,Cantidad,Monto,Fecha_del_Registro ) VALUES ('{textBox1.Text}', '{textBox2.Text}','{comboBox1.Items}','{textBox4.Text}','{textBox4.Text}','{textBox5.Text}','{DateTime.Now.ToString("dd/MM/yyyy")}')", conect.SqlConnection);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Reguistro Exitoso");
+                    conect.Cerrar();
+                }
+                catch (Exception es)
+                {
+                    MessageBox.Show($"ERROR: {es}");
+                    conect.Cerrar();
+                }
             }
         }
 

@@ -32,19 +32,23 @@ namespace WindowsFormsApp1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("El nuevo usuario sera agregado.\n¿Seguro que deseas registrarlo?", "Info", MessageBoxButtons.YesNo);
+            if (result == DialogResult.OK)
             {
-                conectar.Abrir();
-                SqlCommand sqlCommand = new SqlCommand($"Insert Into usuarios (uname,pass,nombre,sexo,puesto,estado) values ('{txtnickname.Text}','{txtpass.Text}','{txtnombre.Text}','{csexo.Text}','{cpuesto.Text}','1')", conectar.SqlConnection);
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("usuario reguistrado");
-                txtnombre.Text = txtnickname.Text = txtpass.Text = csexo.Text = cpuesto.Text = "";
-                conectar.Cerrar();
-            }
-            catch (Exception es)
-            {
-                MessageBox.Show($"error: {es}");
-                conectar.Cerrar();
+                try
+                {
+                    conectar.Abrir();
+                    SqlCommand sqlCommand = new SqlCommand($"Insert Into usuarios (uname,pass,nombre,sexo,puesto,estado) values ('{txtnickname.Text}','{txtpass.Text}','{txtnombre.Text}','{csexo.Text}','{cpuesto.Text}','1')", conectar.SqlConnection);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("usuario reguistrado");
+                    txtnombre.Text = txtnickname.Text = txtpass.Text = csexo.Text = cpuesto.Text = "";
+                    conectar.Cerrar();
+                }
+                catch (Exception es)
+                {
+                    MessageBox.Show($"error: {es}");
+                    conectar.Cerrar();
+                }
             }
         }
     }

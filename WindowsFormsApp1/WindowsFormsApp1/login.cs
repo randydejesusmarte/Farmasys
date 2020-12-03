@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
         }
 
         private readonly conectar conectar = new conectar();
+
         private void btn_Click(object sender, EventArgs e)
         {
             if (txtname.Text == "")
@@ -50,7 +51,6 @@ namespace WindowsFormsApp1
                             {
                                 inicio.nombre = sqlData["nombre"].ToString();
                                 inicio.sexo = sqlData["sexo"].ToString();
-
                             }
                             inicio.Show();
                             Hide();

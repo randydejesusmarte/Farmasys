@@ -7,9 +7,8 @@ namespace WindowsFormsApp1
     internal class conectar
     {
         public SqlConnection SqlConnection = new SqlConnection();
-        private readonly string cadena1 = $"Data source = DESKTOP-NDNKUPF\\SQLEXPRESS; Initial Catalog = farmacia; Integrated Security = True;";//laptop
-        //private readonly string cadena1 = $"Data source = DESKTOP-LAVHCC6\\SQLEXPRESS01; Initial Catalog = farmacia; Integrated Security = True;";//pc
-
+        private readonly string cadena1 = $"Data source = DESKTOP-NDNKUPF\\SQLEXPRESS; Initial Catalog = farmacia; Integrated Security = True;";
+        
         public conectar()
         {
             SqlConnection.ConnectionString = cadena1;
@@ -20,7 +19,6 @@ namespace WindowsFormsApp1
             try
             {
                 SqlConnection.Open();
-                Console.WriteLine("abierto");
             }
             catch (Exception es)
             {
