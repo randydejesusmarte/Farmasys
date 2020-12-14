@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Seguro que deseas agregar a factura?","info",MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Seguro que deseas agregar a factura?", "info", MessageBoxButtons.YesNo);
             if (result == DialogResult.OK)
             {
                 try

@@ -62,7 +62,7 @@ namespace WindowsFormsApp1
 
         private void btadd_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("El producto sera agregado.\n¿Seguro que deseas guardar?","Info",MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("El producto sera agregado.\n¿Seguro que deseas guardar?", "Info", MessageBoxButtons.YesNo);
             if (result == DialogResult.OK)
             {
                 try

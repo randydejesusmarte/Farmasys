@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             screen.Controls.Clear();
         }
 
-        public void formson(object formso)
+        public void FormH(object formso)
         {
             if (screen.Controls.Count > 0)
             {
@@ -88,19 +88,19 @@ namespace WindowsFormsApp1
 
         private void btinventario_Click(object sender, EventArgs e)
         {
-            formson(new Inventario());
+            FormH(new Inventario());
             welcom.Visible = false;
         }
 
         private void btbuscar_Click(object sender, EventArgs e)
         {
-            formson(new Buscar());
+            FormH(new Buscar());
             welcom.Visible = false;
         }
 
         public void btfact_Click(object sender, EventArgs e)
         {
-            formson(new factura());
+            FormH(new factura());
             welcom.Visible = false;
         }
     }
