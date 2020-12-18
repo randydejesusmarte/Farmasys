@@ -47,7 +47,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._150_add_user;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_add_user_male_96px;
             this.pictureBox1.Location = new System.Drawing.Point(274, 235);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(54, 50);

@@ -28,25 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._141_user_1;
-            this.pictureBox1.Location = new System.Drawing.Point(64, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 110);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // txtname
             // 
@@ -67,6 +57,8 @@
             // 
             this.btn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_enter_48px;
+            this.btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn.Location = new System.Drawing.Point(0, 277);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(239, 68);
@@ -103,6 +95,16 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Agregar Usuario";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_customer_96px;
+            this.pictureBox1.Location = new System.Drawing.Point(64, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(110, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // login
             // 

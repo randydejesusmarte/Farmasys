@@ -32,22 +32,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.welcom = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btfact = new System.Windows.Forms.Button();
             this.btinventario = new System.Windows.Forms.Button();
             this.btbuscar = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btinicio = new System.Windows.Forms.Button();
             this.drager = new System.Windows.Forms.Panel();
             this.pimini = new System.Windows.Forms.PictureBox();
             this.pisize = new System.Windows.Forms.PictureBox();
             this.piclose = new System.Windows.Forms.PictureBox();
+            this.btfact = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btinicio = new System.Windows.Forms.Button();
             this.screen.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.drager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pimini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pisize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piclose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // screen
@@ -99,27 +99,18 @@
             this.panel2.Size = new System.Drawing.Size(136, 513);
             this.panel2.TabIndex = 2;
             // 
-            // btfact
-            // 
-            this.btfact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btfact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btfact.Location = new System.Drawing.Point(1, 169);
-            this.btfact.Name = "btfact";
-            this.btfact.Size = new System.Drawing.Size(132, 45);
-            this.btfact.TabIndex = 11;
-            this.btfact.Text = "FACTURACION";
-            this.btfact.UseVisualStyleBackColor = true;
-            this.btfact.Click += new System.EventHandler(this.btfact_Click);
-            // 
             // btinventario
             // 
             this.btinventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btinventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btinventario.Image = global::WindowsFormsApp1.Properties.Resources.icons8_warehouse_30px;
+            this.btinventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btinventario.Location = new System.Drawing.Point(1, 220);
             this.btinventario.Name = "btinventario";
             this.btinventario.Size = new System.Drawing.Size(132, 45);
             this.btinventario.TabIndex = 11;
             this.btinventario.Text = "INVENTARIO";
+            this.btinventario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btinventario.UseVisualStyleBackColor = true;
             this.btinventario.Click += new System.EventHandler(this.btinventario_Click);
             // 
@@ -127,35 +118,15 @@
             // 
             this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbuscar.Image = global::WindowsFormsApp1.Properties.Resources.icons8_search_30px;
+            this.btbuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btbuscar.Location = new System.Drawing.Point(1, 271);
             this.btbuscar.Name = "btbuscar";
             this.btbuscar.Size = new System.Drawing.Size(132, 45);
             this.btbuscar.TabIndex = 11;
-            this.btbuscar.Text = "BUSCAR";
+            this.btbuscar.Text = "       BUSCAR";
             this.btbuscar.UseVisualStyleBackColor = true;
             this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources._141_user_1;
-            this.pictureBox4.Location = new System.Drawing.Point(1, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(132, 100);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // btinicio
-            // 
-            this.btinicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btinicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btinicio.Location = new System.Drawing.Point(1, 118);
-            this.btinicio.Name = "btinicio";
-            this.btinicio.Size = new System.Drawing.Size(132, 45);
-            this.btinicio.TabIndex = 11;
-            this.btinicio.Text = "INICIO";
-            this.btinicio.UseVisualStyleBackColor = true;
-            this.btinicio.Click += new System.EventHandler(this.btinicio_Click);
             // 
             // drager
             // 
@@ -172,7 +143,7 @@
             // pimini
             // 
             this.pimini.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pimini.Image = global::WindowsFormsApp1.Properties.Resources._095_inbox;
+            this.pimini.Image = global::WindowsFormsApp1.Properties.Resources.icons8_minimize_window_96px;
             this.pimini.Location = new System.Drawing.Point(732, 0);
             this.pimini.Name = "pimini";
             this.pimini.Size = new System.Drawing.Size(35, 34);
@@ -185,7 +156,7 @@
             // 
             this.pisize.Dock = System.Windows.Forms.DockStyle.Right;
             this.pisize.Enabled = false;
-            this.pisize.Image = global::WindowsFormsApp1.Properties.Resources._123_expand;
+            this.pisize.Image = global::WindowsFormsApp1.Properties.Resources.icons8_maximize_window_96px;
             this.pisize.Location = new System.Drawing.Point(767, 0);
             this.pisize.Name = "pisize";
             this.pisize.Size = new System.Drawing.Size(35, 34);
@@ -197,7 +168,7 @@
             // piclose
             // 
             this.piclose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.piclose.Image = global::WindowsFormsApp1.Properties.Resources._058_power_button;
+            this.piclose.Image = global::WindowsFormsApp1.Properties.Resources.icons8_close_window_96px;
             this.piclose.Location = new System.Drawing.Point(802, 0);
             this.piclose.Name = "piclose";
             this.piclose.Size = new System.Drawing.Size(35, 34);
@@ -205,6 +176,45 @@
             this.piclose.TabIndex = 0;
             this.piclose.TabStop = false;
             this.piclose.Click += new System.EventHandler(this.piclose_Click);
+            // 
+            // btfact
+            // 
+            this.btfact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btfact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btfact.Image = global::WindowsFormsApp1.Properties.Resources.icons8_edit_graph_report_30px_1;
+            this.btfact.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btfact.Location = new System.Drawing.Point(1, 169);
+            this.btfact.Name = "btfact";
+            this.btfact.Size = new System.Drawing.Size(132, 45);
+            this.btfact.TabIndex = 11;
+            this.btfact.Text = "FACTURA";
+            this.btfact.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btfact.UseVisualStyleBackColor = true;
+            this.btfact.Click += new System.EventHandler(this.btfact_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.icons8_customer_96px;
+            this.pictureBox4.Location = new System.Drawing.Point(1, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(132, 100);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btinicio
+            // 
+            this.btinicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btinicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btinicio.Image = global::WindowsFormsApp1.Properties.Resources.icons8_home_30px;
+            this.btinicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btinicio.Location = new System.Drawing.Point(1, 118);
+            this.btinicio.Name = "btinicio";
+            this.btinicio.Size = new System.Drawing.Size(132, 45);
+            this.btinicio.TabIndex = 11;
+            this.btinicio.Text = "     INICIO";
+            this.btinicio.UseVisualStyleBackColor = true;
+            this.btinicio.Click += new System.EventHandler(this.btinicio_Click);
             // 
             // inicio
             // 
@@ -224,11 +234,11 @@
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.drager.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pimini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pisize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.piclose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

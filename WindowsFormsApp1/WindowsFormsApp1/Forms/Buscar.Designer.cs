@@ -72,7 +72,7 @@
             // btfilter
             // 
             this.btfilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btfilter.Image = global::WindowsFormsApp1.Properties.Resources._102_filter;
+            this.btfilter.Image = global::WindowsFormsApp1.Properties.Resources.icons8_update_left_rotation_48px;
             this.btfilter.Location = new System.Drawing.Point(816, 5);
             this.btfilter.Name = "btfilter";
             this.btfilter.Size = new System.Drawing.Size(25, 25);

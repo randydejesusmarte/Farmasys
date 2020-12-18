@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
             welcom.Visible = true;
             if (sexo == "Hombre")
             {
-                switc = "Biemvenida señor\n";
+                switc = "Biemvenido señor\n";
             }
             else if (sexo == "Mujer")
             {
@@ -58,13 +58,13 @@ namespace WindowsFormsApp1
             if (suit == 0)
             {
                 WindowState = FormWindowState.Maximized;
-                pisize.Image = Properties.Resources._118_minimize;
+                pisize.Image = Properties.Resources.icons8_restore_window_96px;
                 suit = 1;
             }
             else
             {
                 WindowState = FormWindowState.Normal;
-                pisize.Image = Properties.Resources._123_expand;
+                pisize.Image = Properties.Resources.icons8_maximize_window_96px;
                 suit = 0;
             }
         }

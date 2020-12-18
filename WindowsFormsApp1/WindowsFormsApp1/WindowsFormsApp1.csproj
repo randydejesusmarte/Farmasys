@@ -110,6 +110,12 @@
       <DependentUpon>Buscar.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\conectar.cs" />
+    <Compile Include="Forms\Regcliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Regcliente.Designer.cs">
+      <DependentUpon>Regcliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\factura.resx">
       <DependentUpon>factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Regcliente.resx">
+      <DependentUpon>Regcliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -240,6 +249,36 @@
     <None Include="Resources\078-shopping-cart.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_buying_48px.png" />
+    <None Include="Resources\icons8_customer_48px.png" />
+    <None Include="Resources\icons8_delete_bin_48px.png" />
+    <None Include="Resources\icons8_edit_file_48px.png" />
+    <None Include="Resources\icons8_enter_48px.png" />
+    <None Include="Resources\icons8_save_all_48px.png" />
+    <None Include="Resources\icons8_update_left_rotation_48px.png" />
+    <None Include="Resources\icons8_buying_96px.png" />
+    <None Include="Resources\icons8_buying_96px1.png" />
+    <None Include="Resources\icons8_close_window_96px.png" />
+    <None Include="Resources\icons8_customer_96px.png" />
+    <None Include="Resources\icons8_delete_bin_96px.png" />
+    <None Include="Resources\icons8_edit_file_96px.png" />
+    <None Include="Resources\icons8_enter_48px1.png" />
+    <None Include="Resources\icons8_maximize_window_96px.png" />
+    <None Include="Resources\icons8_minimize_window_96px.png" />
+    <None Include="Resources\icons8_restore_window_96px.png" />
+    <None Include="Resources\icons8_save_all_96px.png" />
+    <None Include="Resources\icons8_update_left_rotation_48px1.png" />
+    <None Include="Resources\icons8_update_left_rotation_96px.png" />
+    <None Include="Resources\icons8_add_96px.png" />
+    <None Include="Resources\icons8_add_user_male_96px.png" />
+    <None Include="Resources\icons8_edit_graph_report_48px.png" />
+    <None Include="Resources\icons8_handcart_48px.png" />
+    <None Include="Resources\icons8_home_48px.png" />
+    <None Include="Resources\icons8_search_48px.png" />
+    <None Include="Resources\icons8_home_30px.png" />
+    <None Include="Resources\icons8_search_30px.png" />
+    <None Include="Resources\icons8_warehouse_30px.png" />
+    <None Include="Resources\icons8_edit_graph_report_30px_1.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

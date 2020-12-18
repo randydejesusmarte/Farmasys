@@ -19,18 +19,6 @@ namespace WindowsFormsApp1
         private readonly int id;
         private readonly conectar conect = new conectar();
 
-        private void combocomplete()
-        {
-            conect.Abrir();
-            SqlCommand command = new SqlCommand("select Nombre from Inventario", conect.SqlConnection);
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                comboBox1.Items.Add(reader["Nombre"].ToString());
-            }
-            conect.Cerrar();
-        }
-
         private void idf()
         {
             try
@@ -49,6 +37,18 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"error {es}");
             }
         }
+        private void combocomplete()
+        {
+            conect.Abrir();
+            SqlCommand command = new SqlCommand("select Nombre from Inventario", conect.SqlConnection);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                comboBox1.Items.Add(reader["Nombre"].ToString());
+            }
+            conect.Cerrar();
+        }
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
                     }
                 }
             }
-            catch (Exception es) { MessageBox.Show($"error {es}"); }
+            catch (Exception es) { MessageBox.Show(es.Message); }
             conect.Cerrar();
         }
 
@@ -96,7 +96,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception es)
             {
-                MessageBox.Show($"ERROR: {es}");
+                MessageBox.Show(es.Message);
                 conect.Cerrar();
             }
         }
