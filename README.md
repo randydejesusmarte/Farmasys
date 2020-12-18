@@ -14,3 +14,9 @@ optimizado la busqueda de informacion.
 ------------------------------------------------------------------------------------
 #13/12/2020
 Iniciado proseso de agregaro de reportes de factura, usuarios e inventario.
+------------------------------------------------------------------------------------
+#18/12/2020
+refrescamiento de interfaz.
+correccion de errores.
+agregado de registro de ususario.
+------------------------------------------------------------------------------------
