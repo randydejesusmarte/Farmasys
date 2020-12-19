@@ -142,6 +142,11 @@
     <Compile Include="Forms\usuario.Designer.cs">
       <DependentUpon>usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Forms\RFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,14 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Forms\usuario.resx">
       <DependentUpon>usuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,21 +219,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\058-power-button.png" />
-    <None Include="Resources\118-minimize.png" />
-    <None Include="Resources\123-expand.png" />
-    <None Include="Resources\095-inbox.png" />
-    <None Include="Resources\141-user-1.png" />
-    <None Include="Resources\102-filter.png" />
-    <None Include="Resources\101-edit-1.png" />
-    <None Include="Resources\103-refresh.png" />
-    <None Include="Resources\126-plus.png" />
-    <None Include="Resources\127-minus.png" />
-    <None Include="Resources\135-delete.png" />
-    <None Include="Resources\150-add-user.png" />
-    <None Include="Resources\151-user-2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
@@ -246,9 +231,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\078-shopping-cart.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_buying_48px.png" />
     <None Include="Resources\icons8_customer_48px.png" />
     <None Include="Resources\icons8_delete_bin_48px.png" />
@@ -257,17 +239,14 @@
     <None Include="Resources\icons8_save_all_48px.png" />
     <None Include="Resources\icons8_update_left_rotation_48px.png" />
     <None Include="Resources\icons8_buying_96px.png" />
-    <None Include="Resources\icons8_buying_96px1.png" />
     <None Include="Resources\icons8_close_window_96px.png" />
     <None Include="Resources\icons8_customer_96px.png" />
     <None Include="Resources\icons8_delete_bin_96px.png" />
     <None Include="Resources\icons8_edit_file_96px.png" />
-    <None Include="Resources\icons8_enter_48px1.png" />
     <None Include="Resources\icons8_maximize_window_96px.png" />
     <None Include="Resources\icons8_minimize_window_96px.png" />
     <None Include="Resources\icons8_restore_window_96px.png" />
     <None Include="Resources\icons8_save_all_96px.png" />
-    <None Include="Resources\icons8_update_left_rotation_48px1.png" />
     <None Include="Resources\icons8_update_left_rotation_96px.png" />
     <None Include="Resources\icons8_add_96px.png" />
     <None Include="Resources\icons8_add_user_male_96px.png" />
@@ -278,7 +257,7 @@
     <None Include="Resources\icons8_home_30px.png" />
     <None Include="Resources\icons8_search_30px.png" />
     <None Include="Resources\icons8_warehouse_30px.png" />
-    <None Include="Resources\icons8_edit_graph_report_30px_1.png" />
+    <None Include="Resources\icons8_edit_graph_report_30px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

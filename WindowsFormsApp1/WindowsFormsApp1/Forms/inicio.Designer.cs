@@ -181,7 +181,7 @@
             // 
             this.btfact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btfact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btfact.Image = global::WindowsFormsApp1.Properties.Resources.icons8_edit_graph_report_30px_1;
+            this.btfact.Image = global::WindowsFormsApp1.Properties.Resources.icons8_edit_graph_report_30px;
             this.btfact.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btfact.Location = new System.Drawing.Point(1, 169);
             this.btfact.Name = "btfact";

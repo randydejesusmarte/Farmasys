@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using WindowsFormsApp1.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -130,6 +131,11 @@ namespace WindowsFormsApp1
             {
                 textBox5.Text = Convert.ToString(Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox3.Text));
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            new Regcliente().ShowDialog();
         }
     }
 }

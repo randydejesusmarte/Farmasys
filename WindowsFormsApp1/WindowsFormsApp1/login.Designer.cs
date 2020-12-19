@@ -57,6 +57,7 @@
             // 
             this.btn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_enter_48px;
             this.btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn.Location = new System.Drawing.Point(0, 277);

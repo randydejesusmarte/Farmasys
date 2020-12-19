@@ -63,146 +63,6 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _058_power_button {
-            get {
-                object obj = ResourceManager.GetObject("058-power-button", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _078_shopping_cart {
-            get {
-                object obj = ResourceManager.GetObject("078-shopping-cart", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _095_inbox {
-            get {
-                object obj = ResourceManager.GetObject("095-inbox", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _101_edit_1 {
-            get {
-                object obj = ResourceManager.GetObject("101-edit-1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _102_filter {
-            get {
-                object obj = ResourceManager.GetObject("102-filter", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _103_refresh {
-            get {
-                object obj = ResourceManager.GetObject("103-refresh", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _118_minimize {
-            get {
-                object obj = ResourceManager.GetObject("118-minimize", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _123_expand {
-            get {
-                object obj = ResourceManager.GetObject("123-expand", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _126_plus {
-            get {
-                object obj = ResourceManager.GetObject("126-plus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _127_minus {
-            get {
-                object obj = ResourceManager.GetObject("127-minus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _135_delete {
-            get {
-                object obj = ResourceManager.GetObject("135-delete", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _141_user_1 {
-            get {
-                object obj = ResourceManager.GetObject("141-user-1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _150_add_user {
-            get {
-                object obj = ResourceManager.GetObject("150-add-user", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _151_user_2 {
-            get {
-                object obj = ResourceManager.GetObject("151-user-2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_96px {
             get {
                 object obj = ResourceManager.GetObject("icons8_add_96px", resourceCulture);
@@ -236,16 +96,6 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap icons8_buying_96px {
             get {
                 object obj = ResourceManager.GetObject("icons8_buying_96px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_buying_96px1 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_buying_96px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +173,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_edit_graph_report_30px_1 {
+        internal static System.Drawing.Bitmap icons8_edit_graph_report_30px {
             get {
-                object obj = ResourceManager.GetObject("icons8_edit_graph_report_30px_1", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_edit_graph_report_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -346,16 +196,6 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap icons8_enter_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_enter_48px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_enter_48px1 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_enter_48px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -466,16 +306,6 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap icons8_update_left_rotation_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_update_left_rotation_48px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_update_left_rotation_48px1 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_update_left_rotation_48px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
