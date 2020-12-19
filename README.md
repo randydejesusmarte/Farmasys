@@ -18,5 +18,10 @@ Iniciado proseso de agregaro de reportes de factura, usuarios e inventario.
 #18/12/2020
 refrescamiento de interfaz.
 correccion de errores.
-agregado de registro de ususario.
+agregado de registro de ususario 30%.
+------------------------------------------------------------------------------------
+#18/12/2020
+agregado registro de usuario 66%.
+retoques a la interfaz.
+eliminacion de archivos basuras.
 ------------------------------------------------------------------------------------
