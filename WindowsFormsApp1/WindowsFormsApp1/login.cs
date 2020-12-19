@@ -76,5 +76,10 @@ namespace WindowsFormsApp1
         {
             new usuario().ShowDialog();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new AboutBox1().ShowDialog();
+        }
     }
 }

@@ -97,6 +97,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Caja.Designer.cs">
+      <DependentUpon>Caja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     </Compile>
     <Compile Include="Forms\Regcliente.Designer.cs">
       <DependentUpon>Regcliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Servicios.Designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -166,14 +184,23 @@
       <DependentUpon>RUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Caja.resx">
+      <DependentUpon>Caja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\factura.resx">
       <DependentUpon>factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Regcliente.resx">
       <DependentUpon>Regcliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Servicios.resx">
+      <DependentUpon>Servicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
