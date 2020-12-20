@@ -16,5 +16,6 @@ namespace WindowsFormsApp1.Forms
         {
             InitializeComponent();
         }
+        conectar conectar = new conectar();
     }
 }

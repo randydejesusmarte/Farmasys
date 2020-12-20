@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usuario));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -185,6 +186,7 @@
             this.Controls.Add(this.txtnickname);
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.adminpass);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "usuario";
             this.Text = "usuario";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

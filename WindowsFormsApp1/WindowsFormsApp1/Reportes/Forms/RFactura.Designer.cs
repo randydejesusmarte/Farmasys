@@ -29,12 +29,22 @@ namespace WindowsFormsApp1.Reportes.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.farmaciaDataSet = new WindowsFormsApp1.farmaciaDataSet();
+            this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.facturaTableAdapter = new WindowsFormsApp1.farmaciaDataSetTableAdapters.FacturaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "factura";
+            reportDataSource1.Value = this.facturaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp1.Reportes.RDLCs.RFactura.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -46,7 +56,21 @@ namespace WindowsFormsApp1.Reportes.Forms
             this.reportViewer1.ShowStopButton = false;
             this.reportViewer1.ShowZoomControl = false;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 1;
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // farmaciaDataSet
+            // 
+            this.farmaciaDataSet.DataSetName = "farmaciaDataSet";
+            this.farmaciaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // facturaBindingSource
+            // 
+            this.facturaBindingSource.DataMember = "Factura";
+            this.facturaBindingSource.DataSource = this.farmaciaDataSet;
+            // 
+            // facturaTableAdapter
+            // 
+            this.facturaTableAdapter.ClearBeforeFill = true;
             // 
             // RFactura
             // 
@@ -57,12 +81,16 @@ namespace WindowsFormsApp1.Reportes.Forms
             this.Name = "RFactura";
             this.Text = "RFactura";
             this.Load += new System.EventHandler(this.RFactura_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private farmaciaDataSet farmaciaDataSet;
+        private System.Windows.Forms.BindingSource facturaBindingSource;
+        private farmaciaDataSetTableAdapters.FacturaTableAdapter facturaTableAdapter;
     }
 }

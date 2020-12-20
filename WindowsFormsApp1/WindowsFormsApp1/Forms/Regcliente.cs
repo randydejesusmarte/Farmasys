@@ -37,16 +37,23 @@ namespace WindowsFormsApp1.Forms
             DialogResult dialogResult = MessageBox.Show("El usuario sera agregado.\nseguro que deseas agregarlo?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dialogResult == DialogResult.Yes)
             {
-                conectar.Abrir();
-                SqlCommand command = new SqlCommand("insert into Clientes (nom_cli,tel_cli,dir_cli,desc_cli) values ('" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "'", conectar.SqlConnection);
-                command.ExecuteNonQuery();
-                conectar.Cerrar();
+                try
+                {
+                    conectar.Abrir();
+                    SqlCommand command = new SqlCommand("INSERT INTO Clientes (Nom_cli, tel_cli, dir_cli) VALUES ('" + textBox2.Text + "','" + textBox3.Text + "','"+textBox4.Text+"')", conectar.SqlConnection);
+                    command.ExecuteNonQuery();
+                    conectar.Cerrar();
+                }
+                catch(Exception es)
+                {
+                    MessageBox.Show(es.ToString());
+                }
             }
         }
 
         private void lipiart()
         {
-            textBox1.Text = textBox2.Text = textBox3.Text = textBox4.Text = textBox5.Text = "";
+            textBox1.Text = textBox2.Text = textBox3.Text = textBox4.Text =  "";
             idf();
         }
 

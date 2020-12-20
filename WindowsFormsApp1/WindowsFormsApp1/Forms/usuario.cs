@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("El nuevo usuario sera agregado.\n¿Seguro que deseas registrarlo?", "Info", MessageBoxButtons.YesNo);
-            if (result == DialogResult.OK)
+            if (result == DialogResult.Yes)
             {
                 try
                 {

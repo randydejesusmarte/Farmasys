@@ -98,6 +98,8 @@
             // 
             // textBox2
             // 
+            this.textBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox2.Location = new System.Drawing.Point(117, 53);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(293, 20);

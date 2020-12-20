@@ -62,8 +62,8 @@ namespace WindowsFormsApp1
 
         private void btadd_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("El producto sera agregado.\n¿Seguro que deseas guardar?", "Info", MessageBoxButtons.YesNo);
-            if (result == DialogResult.OK)
+            DialogResult result = MessageBox.Show("El nuevo usuario sera agregado.\n¿Seguro que deseas registrarlo?", "Info", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
                 try
                 {
@@ -83,8 +83,8 @@ namespace WindowsFormsApp1
         }
         private void btedit_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("La descripcion del producto sera modificado.\n¿Seguro que deseas guardar?", "Info", MessageBoxButtons.YesNo);
-            if (result == DialogResult.OK)
+            DialogResult result = MessageBox.Show("El nuevo usuario sera agregado.\n¿Seguro que deseas registrarlo?", "Info", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
                 try
                 {
@@ -105,8 +105,8 @@ namespace WindowsFormsApp1
 
         private void btdelete_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("El producto sera eliminado.\n¿Seguro que deseas eliminar?", "Info", MessageBoxButtons.YesNo);
-            if (result == DialogResult.OK)
+            DialogResult result = MessageBox.Show("El nuevo usuario sera agregado.\n¿Seguro que deseas registrarlo?", "Info", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
                 try
                 {

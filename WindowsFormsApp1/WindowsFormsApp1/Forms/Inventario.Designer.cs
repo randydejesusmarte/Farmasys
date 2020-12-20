@@ -141,6 +141,7 @@
             // btdelete
             // 
             this.btdelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btdelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btdelete.Image = global::WindowsFormsApp1.Properties.Resources.icons8_delete_bin_96px;
             this.btdelete.Location = new System.Drawing.Point(753, 188);
             this.btdelete.Name = "btdelete";
@@ -154,6 +155,7 @@
             // btedit
             // 
             this.btedit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btedit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btedit.Image = global::WindowsFormsApp1.Properties.Resources.icons8_edit_file_96px;
             this.btedit.Location = new System.Drawing.Point(712, 188);
             this.btedit.Name = "btedit";
@@ -167,6 +169,7 @@
             // btadd
             // 
             this.btadd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btadd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btadd.Image = global::WindowsFormsApp1.Properties.Resources.icons8_add_96px;
             this.btadd.Location = new System.Drawing.Point(671, 188);
             this.btadd.Name = "btadd";

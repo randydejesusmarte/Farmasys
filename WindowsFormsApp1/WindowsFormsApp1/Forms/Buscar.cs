@@ -24,8 +24,8 @@ namespace WindowsFormsApp1
             try
             {
                 conectar.Abrir();
-                SqlCommand mySqlCommand = new SqlCommand($"SELECT idfactura as 'ID',Nombre_cliente as 'Nombre del Cliente',Nombre_producto as 'Productos',Precio,Cantidad,Monto,Fecha_del_Registro FROM Factura where idfactura='{txtnom.Text}' or Nombre_cliente='{txtnom.Text}' or Fecha_del_Registro='{txtnom.Text}';", conectar.SqlConnection);
-                SqlDataAdapter sqlData = new SqlDataAdapter();
+                SqlCommand mySqlCommand = new SqlCommand($"SELECT idfactura as 'ID', Nombre_cliente as 'Nombre del Cliente', Nombre_producto as 'Productos', Precio, Cantidad, Monto, Fecha_del_Registro FROM Factura where idfactura like '%{txtnom.Text}%' or Nombre_cliente like '%{txtnom.Text}%' or Fecha_del_Registro like '%{txtnom.Text}%';", conectar.SqlConnection);
+                SqlDataAdapter sqlData = new SqlDataAdapter(mySqlCommand);
                 DataTable dataTable = new DataTable();
                 sqlData.Fill(dataTable);
                 dgvmantenimiento.DataSource = dataTable;
@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
 
         private void txtnom_TextChanged(object sender, EventArgs e)
         {
-            buscar();
+            buscar(); 
         }
     }
 }

@@ -29,24 +29,49 @@ namespace WindowsFormsApp1.Reportes.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.farmaciaDataSet1 = new WindowsFormsApp1.farmaciaDataSet1();
+            this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventarioTableAdapter = new WindowsFormsApp1.farmaciaDataSet1TableAdapters.InventarioTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp1.Reportes.RDLCs.RUsuarios.rdlc";
+            reportDataSource1.Name = "inventario";
+            reportDataSource1.Value = this.inventarioBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp1.Reportes.RDLCs.RImventario.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.ShowBackButton = false;
+            this.reportViewer1.ShowCredentialPrompts = false;
             this.reportViewer1.ShowExportButton = false;
             this.reportViewer1.ShowFindControls = false;
             this.reportViewer1.ShowRefreshButton = false;
             this.reportViewer1.ShowStopButton = false;
             this.reportViewer1.ShowZoomControl = false;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 1;
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // farmaciaDataSet1
+            // 
+            this.farmaciaDataSet1.DataSetName = "farmaciaDataSet1";
+            this.farmaciaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inventarioBindingSource
+            // 
+            this.inventarioBindingSource.DataMember = "Inventario";
+            this.inventarioBindingSource.DataSource = this.farmaciaDataSet1;
+            // 
+            // inventarioTableAdapter
+            // 
+            this.inventarioTableAdapter.ClearBeforeFill = true;
             // 
             // RImventario
             // 
@@ -56,6 +81,9 @@ namespace WindowsFormsApp1.Reportes.Forms
             this.Controls.Add(this.reportViewer1);
             this.Name = "RImventario";
             this.Text = "RImventario";
+            this.Load += new System.EventHandler(this.RImventario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -63,5 +91,8 @@ namespace WindowsFormsApp1.Reportes.Forms
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private farmaciaDataSet1 farmaciaDataSet1;
+        private System.Windows.Forms.BindingSource inventarioBindingSource;
+        private farmaciaDataSet1TableAdapters.InventarioTableAdapter inventarioTableAdapter;
     }
 }

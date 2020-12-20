@@ -26,6 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>es-DO</TargetCulture>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -92,6 +93,7 @@
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -102,6 +104,21 @@
     </Compile>
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="farmaciaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>farmaciaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="farmaciaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>farmaciaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="farmaciaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>farmaciaDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Forms\Caja.cs">
       <SubType>Form</SubType>
@@ -140,11 +157,11 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\inicio.cs">
+    <Compile Include="Forms\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\inicio.Designer.cs">
-      <DependentUpon>inicio.cs</DependentUpon>
+    <Compile Include="Forms\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Inventario.cs">
       <SubType>Form</SubType>
@@ -183,6 +200,12 @@
     <Compile Include="Reportes\Forms\RUsuarios.Designer.cs">
       <DependentUpon>RUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\MENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\MENU.Designer.cs">
+      <DependentUpon>MENU.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
@@ -205,8 +228,8 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\inicio.resx">
-      <DependentUpon>inicio.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
@@ -228,9 +251,45 @@
     <EmbeddedResource Include="Reportes\Forms\RUsuarios.resx">
       <DependentUpon>RUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\MENU.resx">
+      <DependentUpon>MENU.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RDLCs\RFactura.rdlc" />
     <EmbeddedResource Include="Reportes\RDLCs\RImventario.rdlc" />
     <EmbeddedResource Include="Reportes\RDLCs\RUsuarios.rdlc" />
+    <None Include="farmaciaDataSet.xsc">
+      <DependentUpon>farmaciaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="farmaciaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>farmaciaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="farmaciaDataSet.xss">
+      <DependentUpon>farmaciaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="farmaciaDataSet1.xsc">
+      <DependentUpon>farmaciaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="farmaciaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>farmaciaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="farmaciaDataSet1.xss">
+      <DependentUpon>farmaciaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="farmaciaDataSet2.xsc">
+      <DependentUpon>farmaciaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="farmaciaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>farmaciaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="farmaciaDataSet2.xss">
+      <DependentUpon>farmaciaDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -246,9 +305,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -260,11 +319,9 @@
   <ItemGroup>
     <None Include="Resources\icons8_buying_48px.png" />
     <None Include="Resources\icons8_customer_48px.png" />
-    <None Include="Resources\icons8_delete_bin_48px.png" />
     <None Include="Resources\icons8_edit_file_48px.png" />
     <None Include="Resources\icons8_enter_48px.png" />
     <None Include="Resources\icons8_save_all_48px.png" />
-    <None Include="Resources\icons8_update_left_rotation_48px.png" />
     <None Include="Resources\icons8_buying_96px.png" />
     <None Include="Resources\icons8_close_window_96px.png" />
     <None Include="Resources\icons8_customer_96px.png" />
@@ -274,18 +331,19 @@
     <None Include="Resources\icons8_minimize_window_96px.png" />
     <None Include="Resources\icons8_restore_window_96px.png" />
     <None Include="Resources\icons8_save_all_96px.png" />
-    <None Include="Resources\icons8_update_left_rotation_96px.png" />
     <None Include="Resources\icons8_add_96px.png" />
     <None Include="Resources\icons8_add_user_male_96px.png" />
-    <None Include="Resources\icons8_edit_graph_report_48px.png" />
     <None Include="Resources\icons8_handcart_48px.png" />
     <None Include="Resources\icons8_home_48px.png" />
-    <None Include="Resources\icons8_search_48px.png" />
     <None Include="Resources\icons8_home_30px.png" />
     <None Include="Resources\icons8_search_30px.png" />
     <None Include="Resources\icons8_warehouse_30px.png" />
     <None Include="Resources\icons8_edit_graph_report_30px.png" />
-    <Content Include="SqlServerTypes\readme.htm" />
+    <None Include="Resources\icons8_warehouse_48px.png" />
+    <None Include="Resources\icons8_administrator_male_48px.png" />
+    <None Include="Resources\icons8_update_left_rotation_48px.png" />
+    <None Include="Resources\icons8_edit_graph_report_48px.png" />
+    <None Include="Resources\icons8_report_file_48px.png" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

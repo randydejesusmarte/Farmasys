@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             combocomplete();
             idf();
+            textrefresh();
         }
 
         private string fecha;
@@ -104,7 +105,7 @@ namespace WindowsFormsApp1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Seguro que deseas agregar a factura?", "info", MessageBoxButtons.YesNo);
-            if (result == DialogResult.OK)
+            if (result == DialogResult.Yes)
             {
                 try
                 {
@@ -112,6 +113,7 @@ namespace WindowsFormsApp1
                     SqlCommand sqlCommand = new SqlCommand($"INSERT INTO Factura (idfactura,Nombre_cliente ,Nombre_producto,Precio,Cantidad,Monto,Fecha_del_Registro ) VALUES ('{textBox1.Text}', '{textBox2.Text}','{comboBox1.Items}','{textBox4.Text}','{textBox4.Text}','{textBox5.Text}','{DateTime.Now.ToString("dd/MM/yyyy")}')", conect.SqlConnection);
                     sqlCommand.ExecuteNonQuery();
                     MessageBox.Show("Reguistro Exitoso");
+                    buscar();
                     conect.Cerrar();
                 }
                 catch (Exception es)
@@ -136,6 +138,20 @@ namespace WindowsFormsApp1
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             new Regcliente().ShowDialog();
+        }
+
+        private void textrefresh()
+        {
+            AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
+            conect.Abrir();
+            SqlCommand command = new SqlCommand("select Nom_cli from Clientes", conect.SqlConnection);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                collection.Add(reader["Nom_cli"].ToString());
+            }
+            conect.Cerrar();
+            textBox2.AutoCompleteCustomSource = collection;
         }
     }
 }

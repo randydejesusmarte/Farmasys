@@ -83,6 +83,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_administrator_male_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_administrator_male_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_buying_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_buying_48px", resourceCulture);
@@ -113,29 +123,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_customer_48px {
-            get {
-                object obj = ResourceManager.GetObject("icons8_customer_48px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_customer_96px {
             get {
                 object obj = ResourceManager.GetObject("icons8_customer_96px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_delete_bin_48px {
-            get {
-                object obj = ResourceManager.GetObject("icons8_delete_bin_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +243,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_report_file_48px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_report_file_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_restore_window_96px {
             get {
                 object obj = ResourceManager.GetObject("icons8_restore_window_96px", resourceCulture);
@@ -293,16 +293,6 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_search_48px {
-            get {
-                object obj = ResourceManager.GetObject("icons8_search_48px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_update_left_rotation_48px {
             get {
                 object obj = ResourceManager.GetObject("icons8_update_left_rotation_48px", resourceCulture);
@@ -313,9 +303,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_update_left_rotation_96px {
+        internal static System.Drawing.Bitmap icons8_warehouse_30px {
             get {
-                object obj = ResourceManager.GetObject("icons8_update_left_rotation_96px", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_warehouse_30px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +313,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_warehouse_30px {
+        internal static System.Drawing.Bitmap icons8_warehouse_48px {
             get {
-                object obj = ResourceManager.GetObject("icons8_warehouse_30px", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_warehouse_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
