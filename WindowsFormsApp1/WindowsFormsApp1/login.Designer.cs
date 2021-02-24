@@ -46,6 +46,7 @@
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(150, 20);
             this.txtname.TabIndex = 1;
+            this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtname_KeyPress);
             // 
             // txtpass
             // 
@@ -54,6 +55,7 @@
             this.txtpass.Size = new System.Drawing.Size(150, 20);
             this.txtpass.TabIndex = 2;
             this.txtpass.UseSystemPasswordChar = true;
+            this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             // 
             // btn
             // 

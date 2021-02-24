@@ -15,6 +15,36 @@ namespace WindowsFormsApp1
 
         private void btn_Click(object sender, EventArgs e)
         {
+            enter();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new usuario().ShowDialog();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new AboutBox1().ShowDialog();
+        }
+
+        private void txtname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                enter();
+            }
+        }
+
+        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                enter();
+            }
+        }
+        private void enter()
+        {
             if (txtname.Text == "")
             {
                 MessageBox.Show("Falto Ingresar el Nombre", "Alvertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -45,10 +75,11 @@ namespace WindowsFormsApp1
                             break;
                         case 1:
                             inicio inicio = new inicio();
-                            SqlCommand sexquery = new SqlCommand($"select nombre, sexo from usuarios where uname='{txtname.Text.Trim().ToLower()}';", conectar.SqlConnection);
+                            SqlCommand sexquery = new SqlCommand($"select nombre, sexo, puesto from usuarios where uname='{txtname.Text.Trim().ToLower()}';", conectar.SqlConnection);
                             SqlDataReader sqlData = sexquery.ExecuteReader();
                             if (sqlData.Read())
                             {
+                                inicio.puesto = sqlData["puesto"].ToString();
                                 inicio.nombre = sqlData["nombre"].ToString();
                                 inicio.sexo = sqlData["sexo"].ToString();
                             }
@@ -70,16 +101,6 @@ namespace WindowsFormsApp1
                     conectar.Cerrar();
                 }
             }
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            new usuario().ShowDialog();
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            new AboutBox1().ShowDialog();
         }
     }
 }

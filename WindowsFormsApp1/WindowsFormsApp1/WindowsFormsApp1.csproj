@@ -41,7 +41,7 @@
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -73,19 +73,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1440.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1440.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1440.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1440.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1440.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
@@ -99,26 +99,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutBox1.Designer.cs">
-      <DependentUpon>AboutBox1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="farmaciaDataSet.Designer.cs">
+    <Compile Include="Datasets\farmaciaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>farmaciaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="farmaciaDataSet1.Designer.cs">
+    <Compile Include="Datasets\farmaciaDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>farmaciaDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="farmaciaDataSet2.Designer.cs">
+    <Compile Include="Datasets\farmaciaDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>farmaciaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Caja.cs">
       <SubType>Form</SubType>
@@ -207,7 +207,7 @@
       <DependentUpon>MENU.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="AboutBox1.resx">
+    <EmbeddedResource Include="Forms\AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Buscar.resx">
@@ -257,37 +257,37 @@
     <EmbeddedResource Include="Reportes\RDLCs\RFactura.rdlc" />
     <EmbeddedResource Include="Reportes\RDLCs\RImventario.rdlc" />
     <EmbeddedResource Include="Reportes\RDLCs\RUsuarios.rdlc" />
-    <None Include="farmaciaDataSet.xsc">
+    <None Include="Datasets\farmaciaDataSet.xsc">
       <DependentUpon>farmaciaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="farmaciaDataSet.xsd">
+    <None Include="Datasets\farmaciaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>farmaciaDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="farmaciaDataSet.xss">
+    <None Include="Datasets\farmaciaDataSet.xss">
       <DependentUpon>farmaciaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="farmaciaDataSet1.xsc">
+    <None Include="Datasets\farmaciaDataSet1.xsc">
       <DependentUpon>farmaciaDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="farmaciaDataSet1.xsd">
+    <None Include="Datasets\farmaciaDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>farmaciaDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="farmaciaDataSet1.xss">
+    <None Include="Datasets\farmaciaDataSet1.xss">
       <DependentUpon>farmaciaDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="farmaciaDataSet2.xsc">
+    <None Include="Datasets\farmaciaDataSet2.xsc">
       <DependentUpon>farmaciaDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="farmaciaDataSet2.xsd">
+    <None Include="Datasets\farmaciaDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>farmaciaDataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="farmaciaDataSet2.xss">
+    <None Include="Datasets\farmaciaDataSet2.xss">
       <DependentUpon>farmaciaDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -357,5 +357,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
