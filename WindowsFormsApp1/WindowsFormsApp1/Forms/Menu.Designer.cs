@@ -117,7 +117,7 @@
             this.btfact.Text = "FACTURA";
             this.btfact.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btfact.UseVisualStyleBackColor = true;
-            this.btfact.Click += new System.EventHandler(this.btfact_Click);
+            this.btfact.Click += new System.EventHandler(this.Btfact_Click);
             // 
             // btinventario
             // 
@@ -132,7 +132,7 @@
             this.btinventario.Text = "INVENTARIO";
             this.btinventario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btinventario.UseVisualStyleBackColor = true;
-            this.btinventario.Click += new System.EventHandler(this.btinventario_Click);
+            this.btinventario.Click += new System.EventHandler(this.Btinventario_Click);
             // 
             // button2
             // 
@@ -146,7 +146,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "        Reportes";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button1
             // 
@@ -160,7 +160,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "        Caja";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btbuscar
             // 
@@ -174,7 +174,7 @@
             this.btbuscar.TabIndex = 11;
             this.btbuscar.Text = "       BUSCAR";
             this.btbuscar.UseVisualStyleBackColor = true;
-            this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click);
+            this.btbuscar.Click += new System.EventHandler(this.Btbuscar_Click);
             // 
             // pictureBox4
             // 
@@ -198,7 +198,7 @@
             this.btinicio.TabIndex = 11;
             this.btinicio.Text = "     INICIO";
             this.btinicio.UseVisualStyleBackColor = true;
-            this.btinicio.Click += new System.EventHandler(this.btinicio_Click);
+            this.btinicio.Click += new System.EventHandler(this.Btinicio_Click);
             // 
             // drager
             // 
@@ -210,7 +210,7 @@
             this.drager.Name = "drager";
             this.drager.Size = new System.Drawing.Size(837, 34);
             this.drager.TabIndex = 3;
-            this.drager.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drager_MouseDown);
+            this.drager.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Drager_MouseDown);
             // 
             // pimini
             // 
@@ -223,7 +223,7 @@
             this.pimini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pimini.TabIndex = 2;
             this.pimini.TabStop = false;
-            this.pimini.Click += new System.EventHandler(this.pimini_Click);
+            this.pimini.Click += new System.EventHandler(this.Pimini_Click);
             // 
             // pisize
             // 
@@ -236,7 +236,7 @@
             this.pisize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pisize.TabIndex = 1;
             this.pisize.TabStop = false;
-            this.pisize.Click += new System.EventHandler(this.pisize_Click);
+            this.pisize.Click += new System.EventHandler(this.Pisize_Click);
             // 
             // piclose
             // 
@@ -249,7 +249,7 @@
             this.piclose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.piclose.TabIndex = 0;
             this.piclose.TabStop = false;
-            this.piclose.Click += new System.EventHandler(this.piclose_Click);
+            this.piclose.Click += new System.EventHandler(this.Piclose_Click);
             // 
             // inicio
             // 
@@ -266,7 +266,7 @@
             this.Name = "inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "inicio";
-            this.Load += new System.EventHandler(this.inicio_Load);
+            this.Load += new System.EventHandler(this.Inicio_Load);
             this.screen.ResumeLayout(false);
             this.screen.PerformLayout();
             this.panel2.ResumeLayout(false);

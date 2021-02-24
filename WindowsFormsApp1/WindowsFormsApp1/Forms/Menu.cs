@@ -12,17 +12,34 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        public string sexo;
-        public string nombre;
-        public string switc;
+        internal string puesto;
+        internal string sexo;
+        internal string nombre;
+        internal string switc;
         private int suit = 0;
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private static extern void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private static extern void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void inicio_Load(object sender, EventArgs e)
+        private void Filtro()
         {
+            if(puesto == "Cajero")
+            {
+                btfact.Enabled = false;
+            }
+            else if(puesto == "Vendedor")
+            {
+                btinventario.Enabled = false;
+                button1.Enabled = false;
+            }
+        }
+
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            Filtro();
+            button1.Text = puesto;
             welcom.Visible = true;
             if (sexo == "Hombre")
             {
@@ -46,69 +63,64 @@ namespace WindowsFormsApp1
             form.Show();
         }
 
-        private void piclose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        private void Piclose_Click(object sender, EventArgs e) => Application.Exit();
 
-        private void pisize_Click(object sender, EventArgs e)
+        private void Pisize_Click(object sender, EventArgs e)
         {
-            if (suit == 0)
+            switch (suit)
             {
-                WindowState = FormWindowState.Maximized;
-                pisize.Image = Properties.Resources.icons8_restore_window_96px;
-                suit = 1;
-            }
-            else
-            {
-                WindowState = FormWindowState.Normal;
-                pisize.Image = Properties.Resources.icons8_maximize_window_96px;
-                suit = 0;
+                case 0:
+                    WindowState = FormWindowState.Maximized;
+                    pisize.Image = Properties.Resources.icons8_restore_window_96px;
+                    suit = 1;
+                    break;
+                default:
+                    WindowState = FormWindowState.Normal;
+                    pisize.Image = Properties.Resources.icons8_maximize_window_96px;
+                    suit = 0;
+                    break;
             }
         }
 
-        private void pimini_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
+        private void Pimini_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
 
-        private void drager_MouseDown(object sender, MouseEventArgs e)
+        private void Drager_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(Handle, 274, 61458, 0);
         }
 
-        private void btinicio_Click(object sender, EventArgs e)
+        private void Btinicio_Click(object sender, EventArgs e)
         {
             welcom.Visible = true;
             screen.Controls.Clear();
         }
 
-        private void btinventario_Click(object sender, EventArgs e)
+        private void Btinventario_Click(object sender, EventArgs e)
         {
             FormH(new Inventario());
             welcom.Visible = false;
         }
 
-        private void btbuscar_Click(object sender, EventArgs e)
+        private void Btbuscar_Click(object sender, EventArgs e)
         {
             FormH(new Buscar());
             welcom.Visible = false;
         }
 
-        public void btfact_Click(object sender, EventArgs e)
+        private void Btfact_Click(object sender, EventArgs e)
         {
             FormH(new factura());
             welcom.Visible = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             FormH(new MENU());
             welcom.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             FormH(new Caja());
             welcom.Visible = false;

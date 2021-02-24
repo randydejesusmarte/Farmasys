@@ -1,5 +1,4 @@
-﻿using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
-using System;
+﻿using System;
 using System.Windows.Forms;
 using WindowsFormsApp1.Datasets;
 
@@ -15,7 +14,7 @@ namespace WindowsFormsApp1.Reportes.Forms
         private void RFactura_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'farmaciaDataSet.Factura' Puede moverla o quitarla según sea necesario.
-            this.facturaTableAdapter.Fill(this.farmaciaDataSet.Factura);
+            facturaTableAdapter.Fill(farmaciaDataSet.Factura);
             // TODO: esta línea de código carga datos en la tabla 'farmaciaDataSet.Factura' Puede moverla o quitarla según sea necesario.
             facturaTableAdapter.Fill(farmaciaDataSet.Factura);
 

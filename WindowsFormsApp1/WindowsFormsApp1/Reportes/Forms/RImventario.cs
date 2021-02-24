@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using WindowsFormsApp1.Datasets;
 
 namespace WindowsFormsApp1.Reportes.Forms
@@ -14,7 +13,7 @@ namespace WindowsFormsApp1.Reportes.Forms
         private void RImventario_Load(object sender, System.EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'farmaciaDataSet2.Inventario' Puede moverla o quitarla según sea necesario.
-            this.inventarioTableAdapter.Fill(this.farmaciaDataSet2.Inventario);
+            inventarioTableAdapter.Fill(farmaciaDataSet2.Inventario);
 
             reportViewer1.RefreshReport();
         }

@@ -90,8 +90,10 @@ namespace WindowsFormsApp1
             {
                 conect.Abrir();
                 DataTable dataTable = new DataTable();
-                SqlDataAdapter sqlData = new SqlDataAdapter();
-                sqlData.SelectCommand = new SqlCommand($"SELECT idfactura as 'ID', Nombre_cliente as 'Nombre del Cliente', Nombre_producto as 'Productos', Precio, Cantidad, Monto, Fecha_del_Registro as 'Fecha de Registro' FROM Factura where idfactura = '{textBox1.Text}'", conect.SqlConnection);
+                SqlDataAdapter sqlData = new SqlDataAdapter
+                {
+                    SelectCommand = new SqlCommand($"SELECT idfactura as 'ID', Nombre_cliente as 'Nombre del Cliente', Nombre_producto as 'Productos', Precio, Cantidad, Monto, Fecha_del_Registro as 'Fecha de Registro' FROM Factura where idfactura = '{textBox1.Text}'", conect.SqlConnection)
+                };
                 sqlData.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
                 conect.Cerrar();

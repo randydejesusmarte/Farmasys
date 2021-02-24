@@ -150,7 +150,8 @@
             this.cpuesto.FormattingEnabled = true;
             this.cpuesto.Items.AddRange(new object[] {
             "Administrador",
-            "Cajero"});
+            "Cajero",
+            "Vendedor"});
             this.cpuesto.Location = new System.Drawing.Point(113, 191);
             this.cpuesto.Name = "cpuesto";
             this.cpuesto.Size = new System.Drawing.Size(215, 21);
@@ -165,7 +166,7 @@
             "Mujer"});
             this.csexo.Location = new System.Drawing.Point(113, 162);
             this.csexo.Name = "csexo";
-            this.csexo.Size = new System.Drawing.Size(212, 21);
+            this.csexo.Size = new System.Drawing.Size(215, 21);
             this.csexo.TabIndex = 28;
             // 
             // usuario
