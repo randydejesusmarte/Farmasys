@@ -7,7 +7,7 @@ namespace WindowsFormsApp1
     internal class conectar
     {
         public SqlConnection SqlConnection = new SqlConnection();
-        private readonly string cadena1 = "Data source = DESKTOP-UJUKNJS\\SQLEXPRESS; Initial Catalog = farmacia; Integrated Security = True;";
+        private readonly string cadena1 = "Data source = RANDY\\SQLEXPRESS; Initial Catalog = farmacia; Integrated Security = True;";
 
         public conectar()
         {

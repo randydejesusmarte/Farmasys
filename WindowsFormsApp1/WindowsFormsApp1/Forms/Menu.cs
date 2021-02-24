@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using WindowsFormsApp1.Reportes;
+using WindowsFormsApp1.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -35,13 +36,9 @@ namespace WindowsFormsApp1
             screen.Controls.Clear();
         }
 
-        public void FormH(object formso)
+        public void FormH(Form form)
         {
-            if (screen.Controls.Count > 0)
-            {
-                screen.Controls.Clear();
-            }
-            Form form = formso as Form;
+            screen.Controls.Clear();
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
             screen.Controls.Add(form);
@@ -108,6 +105,12 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             FormH(new MENU());
+            welcom.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormH(new Caja());
             welcom.Visible = false;
         }
     }
