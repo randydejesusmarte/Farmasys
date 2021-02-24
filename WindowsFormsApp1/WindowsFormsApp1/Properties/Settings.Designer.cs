@@ -26,8 +26,7 @@ namespace WindowsFormsApp1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-UJUKNJS\\SQLEXPRESS;Initial Catalog=farmacia;Integrated Securi" +
-            "ty=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=RANDY\\SQLEXPRESS;Initial Catalog=farmacia;Integrated Security=True")]
         public string farmaciaConnectionString {
             get {
                 return ((string)(this["farmaciaConnectionString"]));

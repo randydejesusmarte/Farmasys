@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
                 try
                 {
                     conectar.Abrir();
-                    SqlCommand sqlCommand = new SqlCommand($"Insert Into Inventario (Codigo,Nombre,Descripcion,Precio,Tipo_de_Empaque,Original_o_no,Cantidad,Ubicacion,FechaExp,Fecha_del_Registro) values ('{tcodigo.Text}','{txtnom.Text}','{txtdesc.Text}','{txtprecio.Text}','{cbempack.Text}','{cgenerico.Checked}','{txtcant.Text}','{txtubicacion.Text}','{mtxtfecha.Text}','{DateTime.Now:dd/MM/yyyy}')", conectar.SqlConnection);
+                    SqlCommand sqlCommand = new SqlCommand($"Insert Into Inventario (Codigo, Nombre, Descripcion, Precio, Tipo_de_Empaque, Original_o_no, Cantidad, Ubicacion, FechaExp, Fecha_del_Registro) values ('{tcodigo.Text}','{txtnom.Text}','{txtdesc.Text}','{txtprecio.Text}','{cbempack.Text}','{cgenerico.Checked}','{txtcant.Text}','{txtubicacion.Text}','{mtxtfecha.Text}','{DateTime.Now:dd/MM/yyyy}')", conectar.SqlConnection);
                     sqlCommand.ExecuteNonQuery();
                     MessageBox.Show("Producto reguistrado");
                     conectar.Cerrar();
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
                 }
                 catch (Exception es)
                 {
-                    MessageBox.Show($"error: {es}");
+                    MessageBox.Show($"error: {es.Message}");
                     conectar.Cerrar();
                 }
             }
@@ -89,7 +89,7 @@ namespace WindowsFormsApp1
                 try
                 {
                     conectar.Abrir();
-                    SqlCommand sqlCommand = new SqlCommand($"Update Inventario set codigo='{tcodigo.Text}',nombre='{txtnom.Text}',Descripcion='{txtdesc.Text}',Precio='{txtprecio.Text}',Tipo_de_Empaque='{cbempack.Text}',Original_o_no='{cgenerico.Checked}',Cantidad='{txtcant.Text}',Ubicacion='{txtubicacion.Text}',FechaExp='{mtxtfecha.Text}' where ID={id}", conectar.SqlConnection);
+                    SqlCommand sqlCommand = new SqlCommand($"Update Inventario set codigo = '{tcodigo.Text}', nombre = '{txtnom.Text}', Descripcion = '{txtdesc.Text}', Precio = '{txtprecio.Text}', Tipo_de_Empaque = '{cbempack.Text}', Original_o_no = '{cgenerico.Checked}', Cantidad = '{txtcant.Text}', Ubicacion = '{txtubicacion.Text}', FechaExp = '{mtxtfecha.Text}' where ID = '{id}'", conectar.SqlConnection);
                     sqlCommand.ExecuteNonQuery();
                     MessageBox.Show("Producto modificado");
                     conectar.Cerrar();

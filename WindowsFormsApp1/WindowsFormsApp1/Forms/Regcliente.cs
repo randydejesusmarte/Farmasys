@@ -40,11 +40,11 @@ namespace WindowsFormsApp1.Forms
                 try
                 {
                     conectar.Abrir();
-                    SqlCommand command = new SqlCommand("INSERT INTO Clientes (Nom_cli, tel_cli, dir_cli) VALUES ('" + textBox2.Text + "','" + textBox3.Text + "','"+textBox4.Text+"')", conectar.SqlConnection);
+                    SqlCommand command = new SqlCommand("INSERT INTO Clientes (Nom_cli, tel_cli, dir_cli) VALUES ('" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "')", conectar.SqlConnection);
                     command.ExecuteNonQuery();
                     conectar.Cerrar();
                 }
-                catch(Exception es)
+                catch (Exception es)
                 {
                     MessageBox.Show(es.ToString());
                 }
@@ -53,7 +53,7 @@ namespace WindowsFormsApp1.Forms
 
         private void lipiart()
         {
-            textBox1.Text = textBox2.Text = textBox3.Text = textBox4.Text =  "";
+            textBox1.Text = textBox2.Text = textBox3.Text = textBox4.Text = "";
             idf();
         }
 

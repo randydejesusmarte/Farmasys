@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using WindowsFormsApp1.Reportes;
 using WindowsFormsApp1.Forms;
+using WindowsFormsApp1.Reportes;
 
 namespace WindowsFormsApp1
 {

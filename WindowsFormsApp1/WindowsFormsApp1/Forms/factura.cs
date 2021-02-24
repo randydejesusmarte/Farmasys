@@ -15,7 +15,6 @@ namespace WindowsFormsApp1
             idf();
             textrefresh();
         }
-
         private string fecha;
         private int datafecha;
         private readonly int id;
@@ -56,12 +55,13 @@ namespace WindowsFormsApp1
             try
             {
                 conect.Abrir();
-                SqlCommand sqlCommand = new SqlCommand($"select Precio,FechaExp from Inventario where Nombre='{comboBox1.Text}'", conect.SqlConnection);
+                SqlCommand sqlCommand = new SqlCommand($"select Nombre,Precio,FechaExp from Inventario where Nombre='{comboBox1.Text}'", conect.SqlConnection);
                 SqlDataReader reader = sqlCommand.ExecuteReader();
                 if (reader.Read())
                 {
                     textBox4.Text = reader["Precio"].ToString();
                     fecha = reader["FechaExp"].ToString();
+                    txtnomprod.Text = reader["Nombre"].ToString();
 
                     datafecha = DateTime.Compare(Convert.ToDateTime(fecha.ToString()), Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy")));
                     if (datafecha > 0)
@@ -84,14 +84,14 @@ namespace WindowsFormsApp1
             combocomplete();
         }
 
-        private void buscar()
+        private void Buscar()
         {
             try
             {
                 conect.Abrir();
-                SqlCommand mySqlCommand = new SqlCommand($"SELECT idfactura as 'ID',Nombre_cliente as 'Nombre del Cliente',Nombre_producto as 'Productos',Precio,Cantidad,Monto,Fecha_del_Registro FROM Factura where idfactura ='{textBox1.Text}'", conect.SqlConnection);
-                SqlDataAdapter sqlData = new SqlDataAdapter();
                 DataTable dataTable = new DataTable();
+                SqlDataAdapter sqlData = new SqlDataAdapter();
+                sqlData.SelectCommand = new SqlCommand($"SELECT idfactura as 'ID', Nombre_cliente as 'Nombre del Cliente', Nombre_producto as 'Productos', Precio, Cantidad, Monto, Fecha_del_Registro as 'Fecha de Registro' FROM Factura where idfactura = '{textBox1.Text}'", conect.SqlConnection);
                 sqlData.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
                 conect.Cerrar();
@@ -110,10 +110,10 @@ namespace WindowsFormsApp1
                 try
                 {
                     conect.Abrir();
-                    SqlCommand sqlCommand = new SqlCommand($"INSERT INTO Factura (idfactura,Nombre_cliente ,Nombre_producto,Precio,Cantidad,Monto,Fecha_del_Registro ) VALUES ('{textBox1.Text}', '{textBox2.Text}','{comboBox1.Items}','{textBox4.Text}','{textBox4.Text}','{textBox5.Text}','{DateTime.Now.ToString("dd/MM/yyyy")}')", conect.SqlConnection);
+                    SqlCommand sqlCommand = new SqlCommand($"INSERT INTO Factura (idfactura, Nombre_cliente, Nombre_producto, Precio, Cantidad, Monto, Fecha_del_Registro ) VALUES ('{textBox1.Text}', '{textBox2.Text}','{txtnomprod.Text}','{textBox4.Text}','{textBox4.Text}','{textBox5.Text}','{DateTime.Now.ToString("dd/MM/yyyy")}')", conect.SqlConnection);
                     sqlCommand.ExecuteNonQuery();
                     MessageBox.Show("Reguistro Exitoso");
-                    buscar();
+                    Buscar();
                     conect.Cerrar();
                 }
                 catch (Exception es)

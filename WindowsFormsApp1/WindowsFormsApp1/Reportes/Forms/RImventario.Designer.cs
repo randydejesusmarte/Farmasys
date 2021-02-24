@@ -1,4 +1,4 @@
-﻿
+﻿using WindowsFormsApp1.Datasets;
 namespace WindowsFormsApp1.Reportes.Forms
 {
     partial class RImventario
@@ -32,10 +32,10 @@ namespace WindowsFormsApp1.Reportes.Forms
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.farmaciaDataSet1 = new WindowsFormsApp1.farmaciaDataSet1();
+            this.farmaciaDataSet2 = new WindowsFormsApp1.Datasets.farmaciaDataSet2();
             this.inventarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.inventarioTableAdapter = new WindowsFormsApp1.farmaciaDataSet1TableAdapters.InventarioTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet1)).BeginInit();
+            this.inventarioTableAdapter = new WindowsFormsApp1.Datasets.farmaciaDataSet2TableAdapters.InventarioTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,15 +59,15 @@ namespace WindowsFormsApp1.Reportes.Forms
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // farmaciaDataSet1
+            // farmaciaDataSet2
             // 
-            this.farmaciaDataSet1.DataSetName = "farmaciaDataSet1";
-            this.farmaciaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.farmaciaDataSet2.DataSetName = "farmaciaDataSet2";
+            this.farmaciaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // inventarioBindingSource
             // 
             this.inventarioBindingSource.DataMember = "Inventario";
-            this.inventarioBindingSource.DataSource = this.farmaciaDataSet1;
+            this.inventarioBindingSource.DataSource = this.farmaciaDataSet2;
             // 
             // inventarioTableAdapter
             // 
@@ -82,7 +82,7 @@ namespace WindowsFormsApp1.Reportes.Forms
             this.Name = "RImventario";
             this.Text = "RImventario";
             this.Load += new System.EventHandler(this.RImventario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -91,8 +91,8 @@ namespace WindowsFormsApp1.Reportes.Forms
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private farmaciaDataSet1 farmaciaDataSet1;
+        private farmaciaDataSet2 farmaciaDataSet2;
         private System.Windows.Forms.BindingSource inventarioBindingSource;
-        private farmaciaDataSet1TableAdapters.InventarioTableAdapter inventarioTableAdapter;
+        private Datasets.farmaciaDataSet2TableAdapters.InventarioTableAdapter inventarioTableAdapter;
     }
 }

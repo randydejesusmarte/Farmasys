@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using WindowsFormsApp1.Datasets;
 
 namespace WindowsFormsApp1.Reportes.Forms
 {
@@ -12,8 +13,8 @@ namespace WindowsFormsApp1.Reportes.Forms
 
         private void Rusuarios_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'farmaciaDataSet2.usuarios' Puede moverla o quitarla según sea necesario.
-            this.usuariosTableAdapter.Fill(this.farmaciaDataSet2.usuarios);
+            // TODO: esta línea de código carga datos en la tabla 'farmaciaDataSet1.usuarios' Puede moverla o quitarla según sea necesario.
+            this.usuariosTableAdapter.Fill(this.farmaciaDataSet1.usuarios);
 
             reportViewer1.RefreshReport();
         }

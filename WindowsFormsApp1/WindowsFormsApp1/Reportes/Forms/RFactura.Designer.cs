@@ -1,4 +1,4 @@
-﻿
+﻿using WindowsFormsApp1.Datasets;
 namespace WindowsFormsApp1.Reportes.Forms
 {
     partial class RFactura
@@ -32,9 +32,9 @@ namespace WindowsFormsApp1.Reportes.Forms
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.farmaciaDataSet = new WindowsFormsApp1.farmaciaDataSet();
+            this.farmaciaDataSet = new WindowsFormsApp1.Datasets.farmaciaDataSet();
             this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.facturaTableAdapter = new WindowsFormsApp1.farmaciaDataSetTableAdapters.FacturaTableAdapter();
+            this.facturaTableAdapter = new WindowsFormsApp1.Datasets.farmaciaDataSetTableAdapters.FacturaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +91,6 @@ namespace WindowsFormsApp1.Reportes.Forms
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private farmaciaDataSet farmaciaDataSet;
         private System.Windows.Forms.BindingSource facturaBindingSource;
-        private farmaciaDataSetTableAdapters.FacturaTableAdapter facturaTableAdapter;
+        private Datasets.farmaciaDataSetTableAdapters.FacturaTableAdapter facturaTableAdapter;
     }
 }

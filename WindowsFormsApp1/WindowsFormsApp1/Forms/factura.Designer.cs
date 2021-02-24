@@ -47,6 +47,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtnomprod = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,7 +118,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(361, 93);
+            this.textBox4.Location = new System.Drawing.Point(520, 7);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(100, 20);
@@ -144,7 +146,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(318, 96);
+            this.label6.Location = new System.Drawing.Point(465, 10);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 3;
@@ -211,12 +213,30 @@
             this.checkBox1.Text = "Delivery";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // txtnomprod
+            // 
+            this.txtnomprod.Location = new System.Drawing.Point(325, 92);
+            this.txtnomprod.Name = "txtnomprod";
+            this.txtnomprod.Size = new System.Drawing.Size(177, 20);
+            this.txtnomprod.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(284, 95);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "label8";
+            // 
             // factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtnomprod);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox1);
@@ -266,5 +286,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txtnomprod;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -1,4 +1,4 @@
-﻿
+﻿using WindowsFormsApp1.Datasets;
 namespace WindowsFormsApp1.Reportes.Forms
 {
     partial class RUsuarios
@@ -32,12 +32,10 @@ namespace WindowsFormsApp1.Reportes.Forms
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.farmaciaDataSet2 = new WindowsFormsApp1.farmaciaDataSet2();
-            this.farmaciaDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.farmaciaDataSet1 = new WindowsFormsApp1.Datasets.farmaciaDataSet1();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new WindowsFormsApp1.farmaciaDataSet2TableAdapters.usuariosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet2BindingSource)).BeginInit();
+            this.usuariosTableAdapter = new WindowsFormsApp1.Datasets.farmaciaDataSet1TableAdapters.usuariosTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,20 +58,15 @@ namespace WindowsFormsApp1.Reportes.Forms
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // farmaciaDataSet2
+            // farmaciaDataSet1
             // 
-            this.farmaciaDataSet2.DataSetName = "farmaciaDataSet2";
-            this.farmaciaDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // farmaciaDataSet2BindingSource
-            // 
-            this.farmaciaDataSet2BindingSource.DataSource = this.farmaciaDataSet2;
-            this.farmaciaDataSet2BindingSource.Position = 0;
+            this.farmaciaDataSet1.DataSetName = "farmaciaDataSet1";
+            this.farmaciaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usuariosBindingSource
             // 
             this.usuariosBindingSource.DataMember = "usuarios";
-            this.usuariosBindingSource.DataSource = this.farmaciaDataSet2BindingSource;
+            this.usuariosBindingSource.DataSource = this.farmaciaDataSet1;
             // 
             // usuariosTableAdapter
             // 
@@ -88,8 +81,7 @@ namespace WindowsFormsApp1.Reportes.Forms
             this.Name = "RUsuarios";
             this.Text = "Rusuarios";
             this.Load += new System.EventHandler(this.Rusuarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.farmaciaDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -98,9 +90,8 @@ namespace WindowsFormsApp1.Reportes.Forms
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private farmaciaDataSet2 farmaciaDataSet2;
-        private System.Windows.Forms.BindingSource farmaciaDataSet2BindingSource;
+        private farmaciaDataSet1 farmaciaDataSet1;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private farmaciaDataSet2TableAdapters.usuariosTableAdapter usuariosTableAdapter;
+        private Datasets.farmaciaDataSet1TableAdapters.usuariosTableAdapter usuariosTableAdapter;
     }
 }

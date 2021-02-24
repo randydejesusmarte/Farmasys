@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
 
         private void txtnom_TextChanged(object sender, EventArgs e)
         {
-            buscar(); 
+            buscar();
         }
     }
 }

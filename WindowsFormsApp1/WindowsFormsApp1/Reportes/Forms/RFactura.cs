@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using System;
 using System.Windows.Forms;
+using WindowsFormsApp1.Datasets;
 
 namespace WindowsFormsApp1.Reportes.Forms
 {
@@ -15,9 +17,9 @@ namespace WindowsFormsApp1.Reportes.Forms
             // TODO: esta línea de código carga datos en la tabla 'farmaciaDataSet.Factura' Puede moverla o quitarla según sea necesario.
             this.facturaTableAdapter.Fill(this.farmaciaDataSet.Factura);
             // TODO: esta línea de código carga datos en la tabla 'farmaciaDataSet.Factura' Puede moverla o quitarla según sea necesario.
-            this.facturaTableAdapter.Fill(this.farmaciaDataSet.Factura);
+            facturaTableAdapter.Fill(farmaciaDataSet.Factura);
 
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
     }
 }
