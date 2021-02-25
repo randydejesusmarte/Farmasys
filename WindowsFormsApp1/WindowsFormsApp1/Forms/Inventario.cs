@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             update_screen();
         }
-        public string cosa;
+        internal string cosa;
         private string check;
         private string id;
         private readonly conectar conectar = new conectar();
