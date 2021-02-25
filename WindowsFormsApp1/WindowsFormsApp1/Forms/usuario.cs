@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
                 }
                 catch (Exception es)
                 {
-                    MessageBox.Show($"error: {es}");
+                    MessageBox.Show($"error: {es.Message}");
                     conectar.Cerrar();
                 }
             }

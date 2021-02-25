@@ -24,11 +24,11 @@ namespace WindowsFormsApp1
 
         private void Filtro()
         {
-            if(puesto == "Cajero")
+            if (puesto == "Cajero")
             {
                 btfact.Enabled = false;
             }
-            else if(puesto == "Vendedor")
+            else if (puesto == "Vendedor")
             {
                 btinventario.Enabled = false;
                 button1.Enabled = false;
@@ -39,7 +39,6 @@ namespace WindowsFormsApp1
         private void Inicio_Load(object sender, EventArgs e)
         {
             Filtro();
-            button1.Text = puesto;
             welcom.Visible = true;
             if (sexo == "Hombre")
             {
@@ -63,7 +62,10 @@ namespace WindowsFormsApp1
             form.Show();
         }
 
-        private void Piclose_Click(object sender, EventArgs e) => Application.Exit();
+        private void Piclose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void Pisize_Click(object sender, EventArgs e)
         {
@@ -82,7 +84,10 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void Pimini_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
+        private void Pimini_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
 
         private void Drager_MouseDown(object sender, MouseEventArgs e)
         {

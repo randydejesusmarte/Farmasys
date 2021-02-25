@@ -17,7 +17,6 @@ namespace WindowsFormsApp1
         }
         private string fecha;
         private int datafecha;
-        private readonly int id;
         private readonly conectar conect = new conectar();
 
         private void idf()
@@ -35,7 +34,7 @@ namespace WindowsFormsApp1
             }
             catch (Exception es)
             {
-                MessageBox.Show($"error {es}");
+                MessageBox.Show($"error {es.Message}");
             }
         }
         private void combocomplete()
@@ -120,7 +119,7 @@ namespace WindowsFormsApp1
                 }
                 catch (Exception es)
                 {
-                    MessageBox.Show($"ERROR: {es}");
+                    MessageBox.Show($"ERROR: {es.Message}");
                     conect.Cerrar();
                 }
             }
